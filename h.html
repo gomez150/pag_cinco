@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA CON CSS</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+        font-family: 'Arial', sans-serif;
+    }
+    
+    /*BARRA DE NAVEGACION*/
+    nav{
+        background-color: #715d28;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+    .titulo_nav{
+        padding: 15px;
+        padding-left: 30px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    nav ul{
+        list-style: none;
+        text-align: right;
+        font-size: 16px;
+        margin-top: 18px;  
+        margin-right: 35px;      
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    nav ul li:hover{
+        cursor: pointer;
+        color: #3a85db;
+    }
+    /*montaña*/
+    .montaña{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 50px;
+        width: 27%;
+        height: auto;
+        font-size: 10px;
+        border: 2px solid rgba(212, 212, 212, 0.5);
+        border-radius: 20px;
+        transition: all 0.5s ease;
+    }
+    .montaña img{
+        width: 100%;
+        height: 300px;
+        border-radius: 20px 20px 0 0;
+    }
+    .montaña h1{
+        text-align: left;
+        font-size: 20px;
+        margin: 10px;
+    }
+    .montaña p{
+        margin: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+    .montaña:hover{
+        transform: scale(1.1);
+    }
+    /*bosques*/
+    .bosque{
+        display: inline-block;
+        margin: 15px;
+        margin-top: 10px;
+        width: 27%;
+        height: auto;
+        font-size: 10px;
+        border: 2px solid rgba(212, 212, 212, 0.5);
+        border-radius: 20px;
+        transition: all 0.5s ease;
+    }
+    .bosque img{
+        width: 100%;
+        height: 300px;
+        border-radius: 20px 20px 0 0;
+    }
+    .bosque h1{
+        text-align: left;
+        font-size: 20px;
+        margin: 10px;
+    }
+    .bosque p{
+        margin: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+    .bosque:hover{
+        transform: scale(1.1);
+    }
+    /*costas*/ 
+    .costas{
+        display: inline-block;
+        margin-right: 10px;
+        width: 27%;
+        height: auto;
+        font-size: 10px;
+        border: 2px solid rgba(212, 212, 212, 0.5);
+        border-radius: 20px;
+        transition: all 0.5s ease;
+    }
+    .costas img{
+        width: 100%;
+        height: 300px;
+        border-radius: 20px 20px 0 0;
+    }
+    .costas h1{
+        text-align: left;
+        font-size: 20px;
+        margin: 10px;
+    }
+    .costas p{
+        margin: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+    .costas:hover{
+        transform: scale(1.1);
+    }
+    /*tabla*/
+    table{
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;   
+        border-collapse: collapse;
+        border-left: 2px solid #ccc9c9; 
+        border-right: 2px solid #ccc9c9;
+        border-top: 2px solid #ccc9c9;
+        margin-bottom: 100px;
+    }
+    table tr td{
+        border-bottom: 2px solid #ccc9c9;
+        padding: 20px;
+    }
+    tr:nth-child(1){
+        background-color: #715d28;
+        color: white;
+        font-weight: bold;
+    }
+    tr:hover{
+        background-color: #e3939344;
+    }
+    </style>
+</head>
+<body>
+    <nav><p class="titulo_nav">Viajes y Naturaleza</p>
+        <ul>
+            <li>Inicio</li>
+            <li>Galeria</li>
+            <li>Destinos</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    <div class="montaña"><img src="https://www.ecured.cu/images/thumb/7/7f/Monta%C3%B1a00.jpg/1200px-Monta%C3%B1a00.jpg" alt="Montaña">
+        <h1>Paisajes de montaña</h1>
+        <p>Las montañas son una de las maravillas de la naturaleza.</p>
+    </div>
+    <div class="bosque"><img src="https://plus.unsplash.com/premium_photo-1683444545165-877d0ab2b861?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9zcXVlJTIwcHJvZnVuZG98ZW58MHx8MHx8fDA%3D" alt="Bosque">
+        <h1>Bosques</h1>
+        <p>Los bosques son el hogar de muchas especies de animales y plantas.</p>
+    </div>
+    <div class="costas"><img src="https://lonelyplanetes.cdnstatics2.com/cdn/ff/GW40qmQyaQiq87nsjxGM8ATKsOqzXQi6FfwvNYmLr_g/1726123973/public/styles/1536x864_scale_crop/public/blog/PolinesiaFrancesa_playaRangiroa_GettyRF_524891702_Vpommeyrol_Getty%20Images_0.jpg?itok=Apc-6vs2" alt="costas">
+        <h1>Costas</h1>
+        <p>Las costas son lugares de gran belleza y diversidad. Atraen turismo nacional e internacional.</p>
+    </div>
+    <table>
+        <tr>
+            <td>Destino</td>
+            <td>País</td>
+            <td>Dificultad</td>
+            <td>Temporada Recomendada</td>
+        </tr>
+        <tr>
+            <td>Machu Picchu</td>
+            <td>Perú</td>
+            <td>Alta</td>
+            <td>Mayo-Septiembre</td>
+        </tr>
+        <tr>
+            <td>Cataratas del niagara</td>
+            <td>Canadá</td>
+            <td>Media</td>
+            <td>Julio-agosto</td>
+        </tr>
+        <tr>
+            <td>Islas Galapagos</td>
+            <td>Ecuador</td>
+            <td>Baja</td>
+            <td>Todo el año</td>
+        </tr>
+        <tr>
+            <td>Torres del Paine</td>
+            <td>Chile</td>
+            <td>Alta</td>
+            <td>Noviembre-Marzo</td>
+
+        </tr>
+    </table>
+</body>
+</html>
+Exprésate con emojis
+💖 👍 😂 🎉
+Respon
