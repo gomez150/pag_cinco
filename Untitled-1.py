@@ -18,10 +18,13 @@ class Aplicacion:
 
         self.labelResultado = Label(self.ven, text="Resultado:", font=("Arial", 12))
         self.labelResultado.place(x=20, y=150)
+        
+        self.labelResultado2 = Label(self.ven, text="", font=("Arial", 12))
+        self.labelResultado2.place(x=20, y=180, width=200)
 
-        Button(self.ven, text="Verificar", font=("Arial", 12), fg="white", bg="green", command=self.presionar).place(x=20, y=200)
-        Button(self.ven, text="Limpiar", font=("Arial", 12), fg="white", bg="black", command=self.limpiar).place(x=120, y=200)
-        Button(self.ven, text="Salir", font=("Arial", 12), fg="white", bg="red", command=self.salir).place(x=220, y=200)
+        Button(self.ven, text="Verificar", font=("Arial", 12), fg="white", bg="green", command=self.presionar).place(x=20, y=250)
+        Button(self.ven, text="Limpiar", font=("Arial", 12), fg="white", bg="black", command=self.limpiar).place(x=120, y=250)
+        Button(self.ven, text="Salir", font=("Arial", 12), fg="white", bg="red", command=self.salir).place(x=220, y=250)
         self.ven.mainloop()
         
         
@@ -30,11 +33,15 @@ class Aplicacion:
     def presionar(self):
         texto = self.txtCadena.get()
         if len(texto) == 0:
-            ce.showinfo("Error", "Ingrese una cadena")
+            ce.showinfo("Error","Ingrese una cadena")
+
+        textor= " ".join(sorted(texto))
+
+        ce.showinfo(f"Resultado", f"{textor}")
         if texto[0] in self.vocales:
-            self.labelResultado.config(text="Es vocal")
+            self.labelResultado2.config(text="Es vocal")
         else:
-            self.labelResultado.config(text="Es consonante")
+            self.labelResultado2.config(text="Es consonante")
         
        
     
