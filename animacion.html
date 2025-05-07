@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Moto Motocross</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       background-image: url('https://media.istockphoto.com/id/1364754714/es/foto/conducir-por-el-camino-de-grava-con-vista-panor%C3%A1mica-del-paisaje-de-namibia.jpg?s=612x612&w=0&k=20&c=1pSlcmZkv6XSPUrNVSD-13Nk8yxztJRCxY8rrrlOxhI=');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       height: 100vh;
-      overflow: hidden;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
     .escena {
@@ -27,117 +32,35 @@
       top: 400px;
       left: 80px;
       width: 200px;
-      height: auto;
-      animation: motoSalto 5s ease-in-out forwards, motoCaballito 3s ease-in-out 6s forwards ;
+      animation: motoSalto 5s ease-in-out forwards, motoCaballito 3s ease-in-out 6s forwards;
       transform-origin: center;
       z-index: 3;
     }
 
     .moto img {
       width: 100%;
+      display: block;
     }
 
     .moto2 {
-      left: 120px; /* Separada un poco */
+      top: 400px;
+      left: 120px;
       animation:
-        motoSalto 5s ease-in-out forwards 3s,
-        motoCaballito 2s ease-in-out forwards 8s;
+        motoSalto 5s ease-in-out 3s forwards,
+        motoCaballito 2s ease-in-out 8s forwards;
     }
 
     .moto2 img {
-      filter: hue-rotate(180deg) saturate(1.5); 
+      filter: hue-rotate(180deg) saturate(1.5);
     }
 
     @keyframes motoSalto {
-      0%   {top:400px; left: 60px; transform: rotate(0deg); }
-      10%  {top:400px; left: 70px; transform: rotate(-30deg); }
+      0%   { top: 400px; left: 60px; transform: rotate(0deg); }
+      10%  { top: 400px; left: 70px; transform: rotate(-30deg); }
       25%  { top: 200px; left: 300px; transform: rotate(-360deg); }
       50%  { top: 500px; left: 400px; transform: rotate(30deg); }
-     
-      100% { top: 400px; left: 700px; }
+      100% { top: 400px; left: 700px; transform: rotate(0deg); }
     }
 
     @keyframes motoCaballito {
-      0%   { top: 400px;left: 700px; transform: rotate(0deg); }
-      100% { top: 400px; left: 900px; transform: rotate(-30deg); }
-    }
-
-    .fuego {
-      position: absolute;
-      top: 400px;
-      left:100px;
-      width: 50px;
-      height: auto;
-      opacity: 0;
-      animation: fuegoAparece 10s ease-in-out forwards;
-      z-index: 2;
-    }
-
-    @keyframes fuegoAparece {
-      0%, 20% { bottom:20px; opacity: 0; }
-      25%, 45% {bottom:20px; opacity: 1; left:200px;transform: scale(2);}
-      50%, 100% { opacity: 0; transform: scale(1);}
-    }
-    .rampla, .ram2 {
-        position: absolute;
-        left:80px;
-        top: 400px;
-        width: 300px;
-        height: 300px;
-        z-index: 1;
-        
-    }
-
-   
-
-    .rampla {
-      left: 80px;
-    }
-
-    .ram2 {
-      left: 680px;
-    }
-
-    .rampla img, .ram2 img {
-      width: 100%;
-    }
-
-
-
-
-
-
-
-
-  </style>
-</head>
-<body>
-  <div class="escena">
-    <!-- Moto 1 -->
-    <div class="moto">
-      <img src="https://png.pngtree.com/png-clipart/20230914/original/pngtree-moto-cross-vector-png-image_12150096.png" />
-    </div>
-
-    <!-- Moto 2 con retraso y color diferente -->
-    <div class="moto moto2">
-      <img src="https://png.pngtree.com/png-clipart/20230914/original/pngtree-moto-cross-vector-png-image_12150096.png" />
-    </div>
-
-    <!-- Fuego -->
-    <div class="fuego">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/036/627/341/small/ai-generated-burning-fire-flames-on-transparent-background-png.png" />
-    </div>
-
-    <!-- Rampas -->
-    <div class="rampla">
-      <img src="https://images.vexels.com/media/users/3/199540/isolated/preview/98ad25f342a7aba7996f8e54587a8c24-rampa-de-skate.png?w=360" />
-    </div>
-
-    <div class="ram2">
-      <img src="https://cdn-icons-png.flaticon.com/512/525/525210.png" />
-    </div>
-  </div>
-</body>
-</html>
-
-
+      0%   { top: 400px; left: 700px; transform: rotate(0deg
