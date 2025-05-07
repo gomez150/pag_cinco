@@ -41,7 +41,7 @@
       left: 120px; /* Separada un poco */
       animation:
         motoSalto 5s ease-in-out forwards 3s,
-        motoCaballito 4s ease-in-out forwards 8s;
+        motoCaballito 2s ease-in-out forwards 8s;
     }
 
     .moto2 img {
@@ -51,15 +51,15 @@
     @keyframes motoSalto {
       0%   {top:400px; left: 60px; transform: rotate(0deg); }
       10%  {top:400px; left: 70px; transform: rotate(-30deg); }
-      25%  { top: 200px; left: 600px; transform: rotate(-360deg); }
-      50%  { top: 500px; left: 700px; transform: rotate(30deg); }
+      25%  { top: 200px; left: 300px; transform: rotate(-360deg); }
+      50%  { top: 500px; left: 400px; transform: rotate(30deg); }
      
-      100% { top: 400px; left: 1000px; }
+      100% { top: 400px; left: 700px; }
     }
 
     @keyframes motoCaballito {
-      0%   { top: 400px;left: 1000px; transform: rotate(0deg); }
-      100% { top: 400px; left: 2100px; transform: rotate(-30deg); }
+      0%   { top: 400px;left: 700px; transform: rotate(0deg); }
+      100% { top: 400px; left: 900px; transform: rotate(-30deg); }
     }
 
     .fuego {
@@ -75,7 +75,7 @@
 
     @keyframes fuegoAparece {
       0%, 20% { bottom:20px; opacity: 0; }
-      25%, 45% {bottom:20px; opacity: 1; left:500px;transform: scale(2);}
+      25%, 45% {bottom:20px; opacity: 1; left:200px;transform: scale(2);}
       50%, 100% { opacity: 0; transform: scale(1);}
     }
     .rampla, .ram2 {
@@ -95,7 +95,7 @@
     }
 
     .ram2 {
-      left: 1000px;
+      left: 680px;
     }
 
     .rampla img, .ram2 img {
